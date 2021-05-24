@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+ <header>
+
+      <div style=" padding-left: 20px; font-size:40px; color: white;">System Ventas</div>
+      <i class="material-icons" style="font-size: 40px; padding-left: 70px; padding-top: 15px;color: aliceblue;">dehaze</i>
+      <i class="material-icons" style="color: white; padding-left: 1300px; padding-top: 13px;padding-right: 10px; font-size: 30px;">person</i>
+      <div style="color: white; font-size: 20px; padding-top: 10px;">Juan Vásquez Ventura</div>
+ </header>
+<body>
+    <div class="collection" style="max-width: 400px;">
+        <a href="#!" class="collection-item"><i class="material-icons">search</i></a>
+        <a href="#!" class="collection-item"><i class="material-icons">home</i>Almacen</a>
+        <a href="#!" class="collection-item"><i class="material-icons">shopping_cart</i>Compras</a>
+        <a href="#!" class="collection-item"><span class="badge">14</span>Tipo de documento</a>
+        <a href="#!" class="collection-item"><span class="badge">1</span>Ventas</a>
+        <a href="#!" class="collection-item"><span class="new badge">4</span>Inventario</a>
+        <a href="#!" class="collection-item">Usuarios </a>
+        <a href="#!" class="collection-item"><span class="badge">14</span>Reporte de Compras</a>
+        <a href="#!" class="collection-item"><span class="badge">14</span>Reportes de Ventas</a>
+        <a href="#!" class="collection-item"><span class="badge">14</span>Gráficos Estadisticos</a>
+      </div>
+
+
+    <div class="container"style="max-width: 500px;">
+        <div class="row">
+            <div class="col s12 color">
+                 <h3>S/. 12.50</h3>          
+            </div>            
+        </div> 
+        <div class="row">  
+            <div class="input-field col s6">
+                <select >
+                  <option value="" disabled selected>FACTURA</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+                <label>DOCUMENTO</label>
+              </div>
+              <div class="input-field col s6">
+                <select>
+                  <option value="" disabled selected>CONTADO</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+                <label>TIPO DE PAGO</label>
+              </div>              
+        </div> 
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                <label for="first_name">SERIE</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">N° DE VENTA</label>
+              </div>
+            </div>       
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="password" type="date" class="validate">
+                <label for="password">Fecha de Compra</label>
+              </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="proveedor" type="text" class="validate">
+                <label for="proveedor">PROVEEDOR</label>
+              </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, options);
+          });
+        
+          // Or with jQuery
+        
+          $(document).ready(function(){
+            $('select').formSelect();
+          });
+    </script>
+</body>
+
+</html>
