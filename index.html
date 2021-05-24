@@ -18,9 +18,17 @@
       <div style="color: white; font-size: 20px; padding-top: 10px;">Juan Vásquez Ventura</div>
  </header>
 <body>
+    <div class="cabecera">
+        <div class="solo" style=" width: 900px; margin-left: 10px;">
+            <a href="#!" class="collection-item" style="color: gray;"><i class="material-icons" style="color: gray;">search</i></a>
+        </div>
+        <div class="row" >
+            <div class="col s10" style="background-color:whitesmoke;height: 65px;width: 1640px;color: gray;">
+            <a href="#" style="color:gray;"></span><span class="material-icons" >home</span>Inicio</a> /Menu Principal</div>
+        </div>
+    </div>
     <div class="cuerpo">
-    <div class="collection" style="max-width: 400px;">
-
+    <div class="collection" style="max-width: 400px;;">
         <a href="#!" class="collection-item" style="color: gray;"><i class="material-icons" style="color: gray;">home</i>Almacen <i class="material-icons" style="padding-left:220px; color: gray;">chevron_right</i></a>
         <a href="#!" class="collection-item" style="color: gray;"><i class="material-icons" style="color: gray;"> shopping_cart</i>Compras <i class="material-icons" style="padding-left:219px; color: gray;">chevron_right</i></a>
         <a href="#!" class="collection-item" style="color: gray;"><i class="material-icons" style="color: gray;">folder</i>Tipo de documento <i class="material-icons" style="padding-left:145px; color: gray;">chevron_right</i></a>
@@ -32,12 +40,59 @@
         <a href="#!" class="collection-item" style="color: gray;"><i class="material-icons" style="color: gray;">equalizer</i>Gráficos Estadisticos<i class="material-icons"style="padding-left:140px; color: gray;">chevron_right</i></a>
       </div>
  <div class="parte2">
-    <div class="row">
-        <div class="col s10" style="background-color:gainsboro;height: 65px;width: 1665px;color: gray;">
-        <a href="#" style="color:gray;"></span><span class="material-icons" >home</span>Inicio</a> /Menu Principal</div>
-    </div>
     <main>
-        <div class="container"style="max-width: 500px;">
+        <div class="container1">
+            <section class="centro">
+                <div class="row" style="margin-top: 30px;">
+                    <div class="col s2" style="font-size: 15px; font-weight:bold;">Producto</div>
+                    <div class="col s10">
+                        <input type="text" placeholder="Buscar por código de barra o nombre del producto" style="padding-left: 10px; background-color: white; border: none; border: 1px solid skyblue; height: 35px; width: 475px;">
+                    </div>
+                  </div>
+                  <table id="tabla">
+                    <thead>
+                      <tr>
+                          <th style="text-align: center;">ITEM</th>
+                          <th style="width: 50px;">CANT.</th>
+                          <th style="width: 350px; padding-left: 15px;">PRODUCTO</th>
+                          <th>MARCA</th>
+                          <th>PRECIO</th>
+                          <th>IMPORTE</th>
+                      </tr>
+                    </thead>        
+                    <tbody class="ctabla" >
+                      <tr>
+                        <td style="text-align: center;">1</td>
+                        <td><input type="text" id="caja"></td>
+                        <td style="width: 350px; padding-left: 15px;">Leche Evaporada Entera Pack x 6 Un Lata 410 Gr</td>
+                        <td>GLORIA</td>
+                        <td><input type="text" id="caja"></td>
+                        <td>15.30</td>
+                    </tr>
+                      <tr>
+                        <td style="text-align: center;">2</td>
+                        <td><input type="text" id="caja"></td>
+                        <td style="width: 350px; padding-left: 15px;">Leche chocolatada Tetra Pack 1 Lt</td>
+                        <td>LAIVE</td>
+                        <td><input type="text" id="caja"></td>
+                        <td>3.10</td>
+                    </tr>
+                      <tr>
+                        <td style="text-align: center;">3</td>
+                        <td><input type="text" id="caja"></td>
+                        <td style="width: 350px; padding-left: 15px;">Leche fresca 0% lactosa Tetra Pack 1Lt</td>
+                        <td>LAIVE</td>
+                        <td><input type="text" id="caja"></td>
+                        <td>3.20</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                  <div class="botones">
+                  <a class="waves-effect waves-light btn" style="background-color: skyblue; width: 200px;height: 40px;text-align: center; font-size: 14px; margin-right: 20px;"><i class="material-icons left"style="font-size: 22px;">shopping_cart</i>GUARDAR COMPRA</a>
+                  <a class="waves-effect waves-light btn" style="background-color: red; width: 200px; height: 40px; text-align: center;font-size: 16px;"><i class="material-icons left" style="font-size: 25px;">delete</i>VACIAR CARRITO</a>
+                </div>
+        </div>
+        <div class="container2"style="width: 500px;">
             <div class="row">
                 <div class="col s12 color">
                      <h3>S/. 12.50</h3>          
@@ -85,25 +140,38 @@
                     <label for="proveedor">PROVEEDOR</label>
                   </div>
             </div>
+            <div class="linea"></div>
+            <div class="row">
+                <div class="text-field col s8">SUB TOTAL</div>
+                <div class="text-field col s4">S/.18.31</div>
+            </div>
+            <div class="row">
+                <div class="text-field col s8">I.G.V(18%)</div>
+                <div class="text-field col s4">S/.3.29</div>
+            </div>
+            <div class="row">
+                <div class="text-field col s8">TOTAL</div>
+                <div class="text-field col s4">S/.18.31</div>
+            </div>
         </div>
+    
+        <script src="js/jquery.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('select');
+                var instances = M.FormSelect.init(elems, options);
+              });
+            
+              // Or with jQuery
+            
+              $(document).ready(function(){
+                $('select').formSelect();
+              });
+        </script>
+    
     </main>
- </div>
-    </div> 
-  
-    <script src="js/jquery.js"></script>
-    <script src="js/materialize.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('select');
-            var instances = M.FormSelect.init(elems, options);
-          });
-        
-          // Or with jQuery
-        
-          $(document).ready(function(){
-            $('select').formSelect();
-          });
-    </script>
+    
 </body>
 
 </html>

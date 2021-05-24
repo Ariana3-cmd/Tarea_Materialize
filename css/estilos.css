@@ -1,6 +1,9 @@
 *{
     box-sizing: border-box;
 }
+body{
+    background-color: gainsboro;
+}
 .color{
     background-color:red;
     text-align: center;
@@ -17,8 +20,58 @@ header{
 .collection{
  margin-left: 10px;
  height: 850px;
+ background-color:white;
  
 }
 .cuerpo{
-    display: flex
+    display: flex;
+    
+}
+.cabecera{
+    display: flex;
+    width: auto;
+    height: 70px;
+   
+}
+.solo{
+    border: 2px solid gainsboro;
+    height: 65px;
+    padding-top: 20px;
+    padding-left: 10px;
+    background-color:white;
+
+}
+main{
+    display: flex;
+}
+#caja{
+    padding-left: 10px;
+    background-color: white;
+    border: none;
+    border: 1px solid black;
+    height: 32px;
+    width: 50px;
+}
+#tabla{
+    width: 1050px;
+    font-size: 13px;
+    height: 180px;
+    background-color: white;
+    margin-left: 20px;
+}
+.container2{
+    background-color: white;
+    margin-left: 40px;
+    margin-top: 40px;
+    height: 700px;
+}
+.linea{
+    width: 480px;
+    margin-left: 10px;
+    border: 2px solid black;
+}
+.botones{
+    margin-top: 30px;
+    margin-left: 300px;
+
 }
